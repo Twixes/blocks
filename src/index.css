@@ -1,0 +1,57 @@
+:root {
+    --font-family: Inter, Helvetica, Arial, sans-serif;
+    font-family: var(--font-family);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+    width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+button,
+input {
+    --color: #000;
+    width: 100%;
+    height: 2.5rem;
+    background: #fff;
+    color: var(--color);
+    font-size: 1.25rem;
+    font-family: var(--font-family);
+}
+
+input {
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    border: 0.125rem solid var(--color);
+    padding: 0 0.75rem;
+    cursor: pointer;
+    font-weight: 700;
+    text-align: left;
+}
+
+button:hover {
+    border: 0.125rem solid transparent;
+    background: var(--color);
+    color: #fff;
+}

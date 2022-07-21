@@ -1,19 +1,20 @@
 {
     "compilerOptions": {
-        "target": "ES2018",
-        "lib": ["DOM", "DOM.Iterable", "ES2018"],
-        "module": "ES2020",
-        "moduleResolution": "node",
-        "declaration": true,
-        "declarationMap": true,
-        "sourceMap": true,
-        "baseUrl": "src/",
-        "rootDir": "src/",
-        "outDir": "dist/",
-        "sourceRoot": "",
-        "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,
+        "target": "ESNext",
+        "useDefineForClassFields": true,
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "allowJs": false,
+        "skipLibCheck": true,
+        "esModuleInterop": false,
+        "allowSyntheticDefaultImports": true,
         "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
         "noImplicitAny": true,
         "strictNullChecks": true,
         "strictFunctionTypes": true,
@@ -27,5 +28,7 @@
         "noImplicitReturns": true,
         "noUncheckedIndexedAccess": true,
         "noPropertyAccessFromIndexSignature": true
-    }
+    },
+    "include": ["src", "jest.config.js"],
+    "references": [{ "path": "./tsconfig.node.json" }]
 }
