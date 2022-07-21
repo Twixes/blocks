@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "target": "ES2018",
+        "lib": ["DOM", "DOM.Iterable", "ES2018"],
+        "module": "ES2020",
+        "moduleResolution": "node",
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "baseUrl": "src/",
+        "rootDir": "src/",
+        "outDir": "dist/",
+        "sourceRoot": "",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "strictBindCallApply": true,
+        "strictPropertyInitialization": true,
+        "noImplicitThis": true,
+        "useUnknownInCatchVariables": true,
+        "alwaysStrict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "noUncheckedIndexedAccess": true,
+        "noPropertyAccessFromIndexSignature": true
+    }
+}

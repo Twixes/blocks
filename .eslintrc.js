@@ -1,0 +1,24 @@
+/* global module */
+module.exports = {
+    ignorePatterns: ['node_modules'],
+    env: {
+        browser: true,
+        es6: true,
+    },
+    settings: {
+        react: {
+            version: 'detect',
+        },
+    },
+    extends: ['plugin:@typescript-eslint/recommended', 'prettier'],
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        ecmaFeatures: {
+            jsx: true,
+        },
+        ecmaVersion: 2018,
+        sourceType: 'module',
+    },
+    plugins: ['@typescript-eslint', 'prettier'],
+    reportUnusedDisableDirectives: true,
+}

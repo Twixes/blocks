@@ -1,0 +1,30 @@
+{
+    "name": "blocks",
+    "version": "0.1.0",
+    "description": "An exercise in blocks.",
+    "private": true,
+    "main": "index.js",
+    "scripts": {
+        "test": "jest",
+        "format": "prettier --write .",
+        "format:check": "prettier .",
+        "compile": "tsc",
+        "compile:check": "tsc --noEmit",
+        "lint": "eslint src --fix",
+        "lint:check": "eslint src"
+    },
+    "author": "Michael Matloka",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/jest": "^28.1.6",
+        "@typescript-eslint/eslint-plugin": "^5.30.7",
+        "@typescript-eslint/parser": "^5.30.7",
+        "eslint": "^8.20.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "jest": "^28.1.3",
+        "prettier": "^2.7.1",
+        "ts-jest": "^28.0.7",
+        "typescript": "^4.7.4"
+    }
+}
