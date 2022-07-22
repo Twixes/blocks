@@ -29,3 +29,32 @@
     align-items: center;
     gap: 0.5rem;
 }
+
+.BlockSubview {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.BlockSubview > :first-child {
+    flex-grow: 1;
+}
+
+.BlockSubview__control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    padding: 0;
+}
+
+.Breadcrumbs {
+    font-weight: 700;
+    line-height: 1.5rem;
+    height: 1.5rem;
+}
+
+a.Breadcrumb {
+    cursor: pointer;
+    text-decoration: underline;
+}

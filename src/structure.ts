@@ -9,15 +9,15 @@ interface BlockBase {
     id: BlockId
     parentId: BlockId | null
     type: BlockType
+    content: string
 }
 
 export interface Paragraph extends BlockBase {
-    content: string
+    parentId: BlockId
     type: BlockType.Paragraph
 }
 
 export interface Page extends BlockBase {
-    title: string
     children: BlockId[]
     createdAt: Date
     type: BlockType.Page
@@ -25,9 +25,11 @@ export interface Page extends BlockBase {
 
 export type Block = Paragraph | Page
 
+/** Generates random alphanumeric string. No collision checks for simplicity. */
 export const generateBlockId = (): BlockId => Math.random().toString(36).slice(2)
 
-export function createBlankBlock(type: BlockType.Paragraph, parentId: BlockId | null): Paragraph
+export function createBlankBlock(type: BlockType.Paragraph, parentId: BlockId): Paragraph
+export function createBlankBlock(type: BlockType.Paragraph, parentId: null): never
 export function createBlankBlock(type: BlockType.Page, parentId: BlockId | null): Page
 export function createBlankBlock(type: BlockType, parentId: BlockId | null): Block
 export function createBlankBlock(type: BlockType, parentId: BlockId | null): Block {
@@ -36,7 +38,7 @@ export function createBlankBlock(type: BlockType, parentId: BlockId | null): Blo
         case BlockType.Paragraph:
             return {
                 id,
-                parentId,
+                parentId: parentId!,
                 content: '',
                 type: BlockType.Paragraph,
             }
@@ -44,7 +46,7 @@ export function createBlankBlock(type: BlockType, parentId: BlockId | null): Blo
             return {
                 id,
                 parentId,
-                title: '',
+                content: '',
                 children: [],
                 createdAt: new Date(),
                 type: BlockType.Page,
@@ -53,3 +55,5 @@ export function createBlankBlock(type: BlockType, parentId: BlockId | null): Blo
             throw new Error(`Unknown block type ${type}`)
     }
 }
+
+export const determineBlockElementId = (block: BlockId) => `block-${block}`

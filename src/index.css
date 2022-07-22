@@ -21,6 +21,7 @@ body {
 h1 {
     font-size: 3rem;
     font-weight: 700;
+    margin: 0 0 1.5rem 0;
 }
 
 button,
@@ -36,6 +37,7 @@ input {
 
 input {
     border: none;
+    padding: 0;
 }
 
 input:focus {
@@ -50,8 +52,17 @@ button {
     text-align: left;
 }
 
-button:hover {
+button:disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+
+button:hover:not(:disabled) {
     border: 0.125rem solid transparent;
     background: var(--color);
     color: #fff;
+}
+
+button:hover:not(:disabled) img {
+    filter: invert(1);
 }
