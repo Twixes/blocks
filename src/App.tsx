@@ -10,8 +10,8 @@ import {
     useDuplicateBlock,
     useAddBlock,
     useMoveBlock,
-} from './atoms'
-import { Page, BlockId, BlockType, Paragraph, determineBlockElementId } from './structure'
+} from './lib/atoms'
+import { Page, BlockId, BlockType, Paragraph, determineBlockElementId } from './lib/structure'
 
 function PageBlock({ block }: { block: Page }): JSX.Element {
     const setActivePageBlockId = useSetRecoilState(activePageState)
