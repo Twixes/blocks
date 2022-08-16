@@ -2,6 +2,8 @@
 
 This is an exercise in a client-side API for a block-based notes app.
 
+<img src="README.png" width="800" alt="Screenshot of Blocks">
+
 ## How to run
 
 The API is located in the `src/lib/` directory, with some tests alongside source code, but to really try blocks out, it's best to run the demo React app. It's built with [Vite](https://vitejs.dev/), and it's both quick and easy. Simply:
