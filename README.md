@@ -1,6 +1,6 @@
 # blocks
 
-This is an exercise in a client-side API for a block-based notes app.
+This is an exercise in a client-side API for a block-based notes app (i.e. Notion Ultra-Lite).
 
 <img src="README.png" width="800" alt="Screenshot of Blocks">
 
